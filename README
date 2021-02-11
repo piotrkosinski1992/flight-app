@@ -1,0 +1,29 @@
+1. For requested Flight Number and date will respond with following:
+   a. Cargo Weight for requested Flight
+   b. Baggage Weight for requested Flight
+   c. Total Weight for requested Flight
+
+   url: (GET) http://localhost:8080/weight-info/5377?date=2015-04-02
+
+   example response:
+   {
+       "cargoWeight": 1486,
+       "baggageWeight": 2196,
+       "totalWeight": 3682
+   }
+
+2. For requested IATA Airport Code and date will respond with following:
+   a. Number of flights departing from this airport,
+   b. Number of flights arriving to this airport,
+   c. Total number (pieces) of baggage arriving to this airport,
+   d. Total number (pieces) of baggage departing from this airport.
+
+   url: (GET) http://localhost:8080/airport-info/LAX?date=2015-01-04
+
+   example response:
+   {
+       "departuresAmt": 0,
+       "arrivalsAmt": 1,
+       "departingBaggageAmt": 0,
+       "arrivingBaggageAmt": 817
+   }
